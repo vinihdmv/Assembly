@@ -1,0 +1,47 @@
+	org 	0
+	JMP	inicio
+	org	10
+	db	"vinicius rodrigues da silva"
+	org	30 
+
+inicio:
+
+	MOV	CL,C0
+	MOV	DL,1B		;num e csrcateres
+	MOV	BL,10 		;aonde ele comeca
+
+PROX:
+
+	MOV	AL,[BL]
+	MOV	[CL],AL
+	inc	BL		;incremento
+	INC	CL		;aqui mantém incremento
+	DEC	DL
+	JNZ	PROX	
+	
+
+
+
+
+comeca:
+
+	MOV	CL,E0
+	MOV	DL,1B		;num e csrcateres
+	MOV	BL,2a 		;aonde ele comeca
+
+termica:
+
+	MOV	AL,[BL]
+	MOV	[CL],AL
+	dec	BL		;incremento
+	INC	CL		;aqui mantém incremento
+	DEC	DL
+	JNZ	termica
+
+
+	end
+
+
+
+
+
