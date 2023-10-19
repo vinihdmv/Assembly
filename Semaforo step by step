@@ -1,0 +1,13 @@
+mov	AL,90
+	out	01
+	in	00
+
+	mov	AL,D8
+	out	1
+	in	00
+
+	mov	AL,FC
+	out	1
+	in	00
+
+	end
